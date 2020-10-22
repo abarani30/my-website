@@ -1,0 +1,865 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #f15f79;
+}
+
+.MainComponent {
+  background-image: url("/images/background1.jpg");
+  background-color: whitesmoke;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.MainGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: transparent;
+  padding: 10px;
+  grid-gap: 7px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.Sidebar {
+  width: 250px;
+  height: 80vh;
+  border-radius: 3px;
+  -moz-box-shadow: 5px 5px 5px rgba(129, 125, 125, 0.4);
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  animation-name: moveToRight;
+  animation-duration: 4s;
+  overflow: hidden;
+  transition: ease-out 2s;
+  opacity: 0.9;
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.My-Photo {
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: filter 1s ease-in-out;
+}
+
+.My-Photo:hover {
+  filter: grayscale(1);
+}
+
+.Name {
+  margin-top: 2px;
+}
+
+.Position {
+  margin-top: -7px;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 7px;
+  background-color: #e5e7e9;
+  width: 60%;
+}
+
+.SocialIconLight {
+  color: #555;
+  font-size: 20px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.SocialIconLight:hover {
+  color: #f15f79;
+}
+
+.SocialIconDark {
+  color: burlywood;
+  font-size: 20px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.SocialIconDark:hover {
+  color: #f15f79;
+}
+
+.ExtraInfo {
+  margin-top: 20px;
+  width: 100%;
+  height: 140px;
+}
+
+.ExtraInfo > div {
+  display: flex;
+  padding-top: 20px;
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.DateIconLight {
+  font-size: 20px;
+  color: #555;
+  margin-right: 6px;
+  margin-top: -2px;
+}
+
+.DateIconDark {
+  font-size: 20px;
+  color: #ccc;
+  margin-right: 6px;
+  margin-top: -2px;
+}
+
+.EmailBtn {
+  margin-top: 20px;
+  border: none;
+  width: 40%;
+  background: #b24592; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #f15f79,
+    #b24592
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #f15f79,
+    #b24592
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  padding: 8px;
+  border-radius: 20px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.EmailBtn:hover {
+  background: #f857a6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ff5858,
+    #f857a6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ff5858,
+    #f857a6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.MainContent {
+  width: 500px;
+  height: 80vh;
+  border-radius: 3px;
+  -moz-box-shadow: 5px 5px 5px rgba(129, 125, 125, 0.4);
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  transition: ease-out 2s;
+  animation-name: moveToLeft;
+  animation-duration: 4s;
+  opacity: 0.9;
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.Top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.About-Me {
+  margin-left: 10px;
+}
+
+.Navbar {
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 20px;
+  animation-name: navbar;
+  animation-duration: 3s;
+}
+
+.NavItems {
+  display: flex;
+  margin-top: -10px;
+}
+
+.NavItems > h5:hover {
+  cursor: pointer;
+  color: #f15f79;
+}
+
+.MobileNavbar {
+  display: none;
+}
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.Menu-Icon-Light {
+  margin-right: 10px;
+  margin-top: 19px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Menu-Icon-Dark {
+  color: #fff;
+  margin-right: 10px;
+  margin-top: 19px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Menu-Icon-Light:hover {
+  color: #f15f79;
+}
+
+.Menu-Icon-Dark:hover {
+  color: #f15f79;
+}
+
+.Dark-Icon {
+  margin-right: 20px;
+  margin-top: 19px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Light-Icon {
+  color: #fff;
+  margin-right: 20px;
+  margin-top: 19px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Dark-Icon:hover {
+  color: #f15f79;
+}
+
+.Light-Icon:hover {
+  color: #f15f79;
+}
+
+.Description {
+  text-align: left;
+  margin-left: 20px;
+  line-height: 28px;
+  font-size: 14px;
+  width: 95%;
+}
+
+.Services {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 12px;
+  padding: 15px;
+  justify-content: center;
+}
+
+.Services > h4 {
+  text-align: left;
+  margin-left: -20px;
+}
+
+.ServiceCardLight {
+  background-color: white;
+  width: 200px;
+  padding: 7px;
+  -moz-box-shadow: 5px 5px 5px rgba(129, 125, 125, 0.4);
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  animation-name: service-card;
+  animation-duration: 3s;
+}
+
+.ServiceCardDark {
+  background-color: #777;
+  width: 200px;
+  padding: 7px;
+  -moz-box-shadow: 5px 5px 5px rgba(129, 125, 125, 0.4);
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  animation-name: service-card;
+  animation-duration: 3s;
+}
+
+.ServiceIcon {
+  margin-top: 4px;
+  font-size: 24px;
+  color: #f15f79;
+}
+
+@keyframes service-card {
+  0% {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.Portfolio {
+  margin-top: 15px;
+  grid-gap: 18px;
+  padding: 8px;
+  justify-content: center;
+}
+
+.Portfolio > h4 {
+  text-align: left;
+  margin-left: -20x;
+}
+
+.Portfolio > a > img {
+  width: 190px;
+  height: 110px;
+  margin-right: 10px;
+  margin-top: -14px;
+  margin-left: 7px;
+  margin-bottom: 20px;
+  -moz-box-shadow: 5px 5px 5px rgba(129, 125, 125, 0.4);
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.4);
+  animation-name: service-card;
+  animation-duration: 3s;
+  transition: filter 1s ease-in-out;
+  cursor: pointer;
+}
+
+.Portfolio > a > img:hover {
+  filter: grayscale(1);
+}
+
+.ContactMe {
+  padding: 10px;
+  margin-top: 60px;
+}
+
+.ContactMe > h4 {
+  text-align: left;
+  margin-left: 2px;
+}
+
+.ContactMe > form > div {
+  animation-name: service-card;
+  animation-duration: 3s;
+}
+
+.username {
+  margin-left: 20px;
+}
+
+.username,
+.subject {
+  margin-top: -20px;
+  width: 200px;
+  font-family: "Montserrat", sans-serif;
+  height: 30px;
+  border: none;
+  border: 1.3px solid #ccc;
+  border-radius: 3px;
+  padding-left: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.message {
+  height: 100px;
+  width: 420px;
+  margin-top: 10px;
+  margin-left: 9px;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border: 1.3px solid #ccc;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-top: 10px;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+}
+
+.alignSendBtn {
+  position: relative;
+}
+
+::placeholder {
+  color: rgb(187, 185, 185);
+}
+
+.SendBtn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+  width: 80px;
+  border: none;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: #314755; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #26a0da,
+    #6ea8cc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #26a0da,
+    #558bac
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  outline: none;
+}
+
+.SendBtn:hover {
+  background: #698abb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #586cdf,
+    #7694ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3073aa,
+    #3cb1e7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Tools {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  left: 14%;
+}
+
+.Tools img {
+  animation: tools 10s linear infinite;
+}
+
+@keyframes tools {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+
+.Tools img:nth-child(1) {
+  animation-delay: 2s;
+}
+
+.Tools img:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.Tools img:nth-child(3) {
+  animation-delay: 4.5s;
+}
+
+.Tools img:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.Tools img:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.Tools img:nth-child(6) {
+  animation-delay: 5s;
+}
+
+.Tools img:nth-child(7) {
+  animation-delay: 6.5s;
+}
+
+.Tools img:nth-child(8) {
+  animation-delay: 5.5s;
+}
+
+.Stars {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 14%;
+}
+
+.Stars img {
+  animation: stars 10s linear infinite;
+}
+
+@keyframes stars {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+}
+
+.Stars img:nth-child(1) {
+  animation-delay: 2s;
+}
+
+.Stars img:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.Stars img:nth-child(3) {
+  animation-delay: 4.5s;
+}
+
+.Stars img:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.Pagination {
+  margin-top: -10px;
+  font-size: 14px;
+}
+
+.Pagination li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.Pagination li a {
+  text-decoration: none;
+  border: 1.5px solid #ccc;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 3px;
+}
+
+.Pagination li a:hover {
+  border: 2.5px solid #ccc;
+}
+
+.Resume {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 15px;
+  grid-gap: 18px;
+  padding: 8px;
+  justify-content: left;
+}
+
+.Resume > h4 {
+  text-align: left;
+  margin-left: -20x;
+}
+
+.Resume > div {
+  width: 210px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: -5px;
+  margin-left: 7px;
+  margin-bottom: 20px;
+  animation-name: service-card;
+  animation-duration: 3s;
+  transition: filter 1s ease-in-out;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+}
+
+.container {
+  margin-top: 10px;
+  width: 210px;
+  background-color: #ddd;
+  height: 25px;
+  border-radius: 20px;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  color: white;
+  height: 5px;
+  font-size: 14px;
+}
+
+.html {
+  width: 90%;
+  background-color: #4caf50;
+}
+.css {
+  width: 90%;
+  background-color: #2196f3;
+}
+.js {
+  color: black;
+  width: 80%;
+  background-color: #f4e736;
+}
+
+.react {
+  color: black;
+  width: 80%;
+  background-color: #80dffc;
+}
+
+.python {
+  width: 80%;
+  background-color: #c5574f;
+}
+
+.django {
+  width: 80%;
+  background-color: #07640a;
+}
+
+@media (min-width: 200px) and (max-width: 480px) {
+  .body {
+    background-color: whitesmoke;
+  }
+
+  .MainComponent {
+    background-image: none;
+    overflow: scroll;
+    background-color: whitesmoke;
+  }
+
+  .MainGrid {
+    display: block;
+    padding-left: 10px;
+    padding-top: 10px;
+    grid-template-columns: auto;
+  }
+
+  .Sidebar {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .SocialIconLight,
+  .SocialIconDark {
+    font-size: 22px;
+  }
+
+  .MainContent {
+    margin-top: 15px;
+    background-color: white;
+    width: 100%;
+    height: auto;
+  }
+
+  .Description {
+    text-align: left;
+    margin-left: 10px;
+    line-height: 28px;
+    font-size: 14px;
+    width: 94%;
+  }
+
+  .Navbar {
+    display: none;
+  }
+
+  .MobileNavbar {
+    margin-top: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: flex;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #eee;
+    animation-name: navbar;
+    animation-duration: 3s;
+  }
+
+  .MobileNavItems {
+    display: flex;
+    margin-top: -10px;
+  }
+
+  .MobileNavItems > h5:hover {
+    cursor: pointer;
+    color: #f15f79;
+  }
+
+  .Services > div {
+    padding: 3;
+    margin-top: 10px;
+    width: 95%;
+  }
+
+  .Services,
+  .Portfolio,
+  .Resume {
+    padding: 3;
+    margin-top: 7px;
+    display: block;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .Services > h4,
+  .Portfolio > h4,
+  .Resume > h4 {
+    margin-left: -3px;
+  }
+
+  .Portfolio > a > img {
+    padding: 3;
+    margin-top: 3px;
+    width: 95%;
+    height: 200px;
+  }
+
+  .Pagination {
+    padding-bottom: 15px;
+  }
+
+  .Resume > div {
+    width: 95%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .ContactMe {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .ContactMe > h4 {
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .ContactMe > form > div {
+    animation-name: service-card;
+    animation-duration: 3s;
+  }
+
+  .username,
+  .subject {
+    margin-top: 0px;
+    width: 90%;
+    font-family: "Montserrat", sans-serif;
+    height: 30px;
+    border: none;
+    border: 1.3px solid #ccc;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 14px;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 15px;
+  }
+
+  .message {
+    height: 100px;
+    width: 90%;
+    margin-top: 15px;
+    margin-left: -1px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border: 1.3px solid #ccc;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+  }
+
+  .alignSendBtn {
+    position: relative;
+  }
+
+  .SendBtn {
+    margin-bottom: 15px;
+    width: 93%;
+    margin-left: 0px;
+  }
+
+  .Tools {
+    bottom: 110px;
+  }
+}
